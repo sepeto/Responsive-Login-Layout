@@ -1,0 +1,27 @@
+include head.pug
+.border#border
+    .contain
+    .contain 
+        form.formulario(action="post")
+            .tenant
+                .tenant__left
+                    p Tenant 
+                    p 
+                        b recover_com    
+                .tenant__right
+                    button(type="button", class="btn btn-primary formulario formulario__switch",value="switch") switch
+            br 
+            br
+            hr
+            h2 Login
+            caption Username or email adress
+            input(type="text", class="form-control")
+            caption Password
+            input(type="text",  class="form-control")
+            input(type="checkbox", name="remember")
+            caption Remember me     
+            a(href="google.com") Forgot password?
+            button(type="button", class="btn btn-primary formulario formulario__login",value="Login") Login
+            .new
+                p Are you a new user?
+                a.formulario__register(href="register") Register

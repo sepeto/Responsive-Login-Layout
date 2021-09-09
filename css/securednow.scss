@@ -1,0 +1,95 @@
+$Fuente1:'Arial', sans-serif;
+$Fuente2: 'Helvetica', sans-serif;
+$color-primario: #1AAE8E;
+$color-claro: #ffffff;
+$color-secundario:#58e76b;
+$color-variacion:#3f579a;
+
+.border{
+    border: black 5px;
+    border-radius: 20px;
+    width: 1200px ;
+    height: 500px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.contain{  
+    border-radius: 20px;
+    width: 50%;
+    height: 100%;
+    float:left;
+    background-color: $color-claro;
+    padding: 5%;
+}
+.contain:first-child {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+@media only screen and(max-width: 800px){
+    .contain:first-child {
+      background-color: red;
+      display:none;
+    }
+
+    .border, .contain{
+        width: 100%;
+        min-width: 300px;
+    }
+  }
+
+.tenant{
+    display:block;
+    &__left{
+        float:left;
+        caption{
+            clear:both;
+        }
+        p{
+            clear:both;
+        }
+    }
+    &__right{
+        float:right;
+    }
+}
+.contain:first-child{
+    background-color: $color-primario;
+}
+
+.formulario{ 
+    font-family: $Fuente1;
+    h2{
+        clear:both;
+        font-family: $Fuente2;
+    }
+    &__switch[value="switch"]{
+        background-color: $color-claro;
+        color:black;
+        float:right;
+    }
+    input[type="text"]{
+        width: 100%;
+        display: block;
+        margin:5px 0 15px 0;
+    }
+    a{
+        float:right;
+    }
+    input[type="button"]{
+        width: 100%;
+    }
+    &__login[value="Login"]{
+        margin: 20px 0 15px 0;
+        width: 100%;
+        background-color: $color-primario;
+        box-shadow: 0 5px  10px -2px $color-secundario;
+    }
+    &__login[value="Login"]:hover{
+        background-color: $color-secundario;
+    }
+    p{float:left}
+    &__register{float:left}
+}
+
