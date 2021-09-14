@@ -1,0 +1,96 @@
+@import "globales.scss";
+body{
+   /* display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-content:center; */
+}
+.contain{
+
+    border: black 5px;
+    border-radius: 20px;
+    box-shadow: 0 5px  10px -2px $color-secundario;
+    height: 500px;
+//translation testing    
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%); 
+    width: 1200px ;
+}
+.side{  
+    border-radius: 20px;
+    width: 50%;
+    height: 100%;
+    float:left;
+    background-color: $color-claro;
+    padding: 3% 6%;
+}
+.side:first-child {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+@media only screen and(max-width: 900px){
+    .side:first-child {
+      background-color: red;
+      display:none;
+    }
+    .contain, .side{
+        width: 100%;
+        min-width: 300px;
+    }
+  }
+.tenant{
+    display:block;
+    &__left{
+        float:left;
+        caption{
+            clear:both;
+        }
+        p{
+            clear:both;
+        }
+    }
+    &__right{
+        float:right;
+    }
+}
+.side:first-child{
+    background-color: $color-primario;
+}
+
+.forms{ 
+    font-family: $Fuente1;
+    h2{
+        clear:both;
+        font-family: $Fuente2;
+    }
+    &__switch[value="switch"]{
+        background-color: $color-claro;
+        color:black;
+        float:right;
+    }
+    input[type="text"]{
+        width: 100%;
+        display: block;
+        margin:5px 0 15px 0;
+    }
+    a{
+        float:right;
+    }
+    input[type="button"]{
+        width: 100%;
+    }
+    &__login[value="Login"]{
+        margin: 20px 0 15px 0;
+        width: 100%;
+        background-color: $color-primario;
+        box-shadow: 0 5px  10px -2px $color-secundario;
+    }
+    &__login[value="Login"]:hover{
+        background-color: $color-secundario;
+    }
+    p{float:left}
+    &__register{float:left}
+}
+

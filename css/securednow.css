@@ -1,0 +1,105 @@
+body {
+  /* display:flex;
+   flex-wrap: wrap;
+   justify-content:center;
+   align-content:center; */
+}
+
+.contain {
+  border: black 5px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 5px 10px -2px #58e76b;
+          box-shadow: 0 5px 10px -2px #58e76b;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 1200px;
+}
+
+.side {
+  border-radius: 20px;
+  width: 50%;
+  height: 100%;
+  float: left;
+  background-color: #ffffff;
+  padding: 3% 6%;
+}
+
+.side:first-child {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+@media only screen and (max-width: 900px) {
+  .side:first-child {
+    background-color: red;
+    display: none;
+  }
+
+  .contain, .side {
+    width: 100%;
+    min-width: 300px;
+  }
+}
+.tenant {
+  display: block;
+}
+.tenant__left {
+  float: left;
+}
+.tenant__left caption {
+  clear: both;
+}
+.tenant__left p {
+  clear: both;
+}
+.tenant__right {
+  float: right;
+}
+
+.side:first-child {
+  background-color: #1AAE8E;
+}
+
+.forms {
+  font-family: "Arial", sans-serif;
+}
+.forms h2 {
+  clear: both;
+  font-family: "Helvetica", sans-serif;
+}
+.forms__switch[value=switch] {
+  background-color: #ffffff;
+  color: black;
+  float: right;
+}
+.forms input[type=text] {
+  width: 100%;
+  display: block;
+  margin: 5px 0 15px 0;
+}
+.forms a {
+  float: right;
+}
+.forms input[type=button] {
+  width: 100%;
+}
+.forms__login[value=Login] {
+  margin: 20px 0 15px 0;
+  width: 100%;
+  background-color: #1AAE8E;
+  -webkit-box-shadow: 0 5px 10px -2px #58e76b;
+          box-shadow: 0 5px 10px -2px #58e76b;
+}
+.forms__login[value=Login]:hover {
+  background-color: #58e76b;
+}
+.forms p {
+  float: left;
+}
+.forms__register {
+  float: left;
+}
