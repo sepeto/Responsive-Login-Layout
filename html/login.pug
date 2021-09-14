@@ -1,27 +1,40 @@
-include head.pug
-.border#border
-    .contain
-    .contain 
-        form.formulario(action="post")
-            .tenant
-                .tenant__left
-                    p Tenant 
-                    p 
-                        b recover_com    
-                .tenant__right
-                    button(type="button", class="btn btn-primary formulario formulario__switch",value="switch") switch
-            br 
-            br
-            hr
-            h2 Login
-            caption Username or email adress
-            input(type="text", class="form-control")
-            caption Password
-            input(type="text",  class="form-control")
-            input(type="checkbox", name="remember")
-            caption Remember me     
-            a(href="google.com") Forgot password?
-            button(type="button", class="btn btn-primary formulario formulario__login",value="Login") Login
-            .new
-                p Are you a new user?
-                a.formulario__register(href="register") Register
+doctype html
+html
+    include head.pug
+    body
+        .contain
+            .side
+            .side 
+                form.forms(action="post" id="login")
+                    .tenant
+                        .tenant__left
+                            p Tenant 
+                            p 
+                                b recover_com    
+                        .tenant__right
+                            button(type="button", class="btn btn-primary formulario formulario__switch",value="switch") switch
+                    br 
+                    br
+                    hr
+                    h2 Login
+                    label Username or email adress
+                    input(type="text", class="form-control" id="user")
+                    label Password
+                    input(type="text",  class="form-control" id="password")
+                    input(type="checkbox", name="remember" id="remember")
+                    label Remember me     
+                    a(href="google.com") Forgot password?
+                    button(type="button", class="btn btn-primary formulario formulario__login",value="Login") Login
+                    .new
+                        p Are you a new user?
+                        a.formulario__register(href="register") Register
+
+//i cannot align vertical flexbox
+
+//problems with class .card and .form-group 
+// they must have css propertys by bootstrap and it distroy my layout overflooding the contain
+//im not able to overwrite properties to theses classes
+
+//its a little dificult to me to translate px to rem because its dificult to me to know the exactly proportion
+// maybe 1 to 15? aprox?
+//but i will try to work in the future always with rem

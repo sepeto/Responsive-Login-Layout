@@ -9,33 +9,41 @@
     <link rel="stylesheet" href="../css/securednow.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body></body>
-</html>
-<div class="border" id="border">
-  <div class="contain"></div>
-  <div class="contain"> 
-    <form class="formulario" action="post">
-      <div class="tenant">
-        <div class="tenant__left">
-          <p>Tenant </p>
-          <p> <b>recover_com    </b></p>
-        </div>
-        <div class="tenant__right">
-          <button class="btn btn-primary formulario formulario__switch" type="button" value="switch">switch</button>
-        </div>
-      </div><br><br>
-      <hr>
-      <h2>Login</h2>
-      <caption>Username or email adress</caption>
-      <input class="form-control" type="text">
-      <caption>Password</caption>
-      <input class="form-control" type="text">
-      <input type="checkbox" name="remember">
-      <caption>Remember me     </caption><a href="google.com">Forgot password?</a>
-      <button class="btn btn-primary formulario formulario__login" type="button" value="Login">Login</button>
-      <div class="new">
-        <p>Are you a new user?</p><a class="formulario__register" href="register">Register</a>
+  <body>
+    <div class="contain">
+      <div class="side"></div>
+      <div class="side"> 
+        <form class="forms" action="post" id="login">
+          <div class="tenant">
+            <div class="tenant__left">
+              <p>Tenant </p>
+              <p> <b>recover_com    </b></p>
+            </div>
+            <div class="tenant__right">
+              <button class="btn btn-primary formulario formulario__switch" type="button" value="switch">switch</button>
+            </div>
+          </div><br><br>
+          <hr>
+          <h2>Login</h2>
+          <label>Username or email adress</label>
+          <input class="form-control" type="text" id="user">
+          <label>Password</label>
+          <input class="form-control" type="text" id="password">
+          <input type="checkbox" name="remember" id="remember">
+          <label>Remember me     </label><a href="google.com">Forgot password?</a>
+          <button class="btn btn-primary formulario formulario__login" type="button" value="Login">Login</button>
+          <div class="new">
+            <p>Are you a new user?</p><a class="formulario__register" href="register">Register</a>
+          </div>
+        </form>
       </div>
-    </form>
-  </div>
-</div>
+    </div>
+  </body>
+</html>
+<!--i cannot align vertical flexbox-->
+<!--problems with class .card and .form-group -->
+<!-- they must have css propertys by bootstrap and it distroy my layout overflooding the contain-->
+<!--im not able to overwrite properties to theses classes-->
+<!--its a little dificult to me to translate px to rem because its dificult to me to know the exactly proportion-->
+<!-- maybe 1 to 15? aprox?-->
+<!--but i will try to work in the future always with rem-->
